@@ -1,0 +1,17 @@
+{
+  "name": "api-rest-e-typescript",
+  "version": "1.0.0",
+  "description": "API Rest Node com TypeScript",
+  "main": "index.js",
+  "author": "Robson Gomes",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "express": "v4"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  }
+}
