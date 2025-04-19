@@ -29,7 +29,7 @@ Este é um projeto de exemplo de uma API Rest desenvolvida com Node.js e TypeScr
 
 - Adicionar dependências:
   ```bash
-  yarn add express@v4
+  yarn add express
   ```
 
 - Adicionar dependências de desenvolvimento:
@@ -44,6 +44,10 @@ Este é um projeto de exemplo de uma API Rest desenvolvida com Node.js e TypeScr
   or
   ```bash
   yarn ts-node-dev ./src/index.ts
+  ```
+- Outras dependencias
+  ```bash
+  yarn add http-status-codes
   ```
 ## Configuração
 - Eslint

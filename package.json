@@ -6,8 +6,15 @@
   "author": "Robson Gomes",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "start": "ts-node-dev ./src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint ./src/** --ext .ts --ext .js",
+    "lint:fix": "eslint ./src/** --ext .ts --ext .js --fix"
+  },
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "http-status-codes": "^2.3.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
