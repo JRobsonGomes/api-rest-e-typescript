@@ -45,7 +45,11 @@ Este é um projeto de exemplo de uma API Rest desenvolvida com Node.js e TypeScr
   ```bash
   yarn ts-node-dev ./src/index.ts
   ```
-
+## Configuração
+- Eslint
+```bash
+npm init @eslint/config
+```
 ## Endpoints
 
 - `GET /`: Retorna "Hello, World!".
