@@ -4,7 +4,7 @@ Este é um projeto de exemplo de uma API Rest desenvolvida com Node.js e TypeScr
 
 ## Pré-requisitos
 
-- Node.js instalado
+- Node v20.19.0 (recomendado)
 - Yarn instalado
 
 ## Instalação
