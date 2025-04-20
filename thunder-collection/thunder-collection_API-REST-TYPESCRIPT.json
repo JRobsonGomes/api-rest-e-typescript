@@ -1,0 +1,36 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "API-REST-TYPESCRIPT",
+    "collectionId": "1e76ea17-ca87-4a1b-8292-c55beaf5fc9d",
+    "dateExported": "2025-04-20T02:19:24.919Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "a548127c-e34c-41b7-8bc7-e8617d312da9",
+            "name": "Cidades",
+            "containerId": "",
+            "created": "2025-04-20T01:17:59.454Z",
+            "sortNum": 10000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "e6c1b4fe-bdae-482d-88ee-22545aa3acff",
+            "colId": "1e76ea17-ca87-4a1b-8292-c55beaf5fc9d",
+            "containerId": "a548127c-e34c-41b7-8bc7-e8617d312da9",
+            "name": "Create",
+            "url": "http://localhost:3333/cidades",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-04-20T01:14:44.002Z",
+            "modified": "2025-04-20T02:17:50.572Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Serra Branca\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "FYXmNcliKBGRjuk0ToxdQyfODvRqcx95cFWpjmgl_T7DGsP7WEud9vU4cAky0Q9wVr3FnxDrfZGYBo3ps5T3sw"
+}
