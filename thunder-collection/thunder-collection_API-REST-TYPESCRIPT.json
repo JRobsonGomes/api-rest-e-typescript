@@ -2,7 +2,7 @@
     "clientName": "Thunder Client",
     "collectionName": "API-REST-TYPESCRIPT",
     "collectionId": "1e76ea17-ca87-4a1b-8292-c55beaf5fc9d",
-    "dateExported": "2025-04-21T19:10:48.073Z",
+    "dateExported": "2025-04-21T21:10:27.978Z",
     "version": "1.2",
     "folders": [
         {
@@ -52,7 +52,7 @@
             "method": "GET",
             "sortNum": 20000,
             "created": "2025-04-21T19:02:43.309Z",
-            "modified": "2025-04-21T19:07:16.801Z",
+            "modified": "2025-04-21T19:19:28.498Z",
             "headers": [],
             "params": [
                 {
@@ -71,7 +71,48 @@
                     "isPath": false
                 }
             ]
+        },
+        {
+            "_id": "0f0b7e0a-5da8-487c-94f9-6f894885020b",
+            "colId": "1e76ea17-ca87-4a1b-8292-c55beaf5fc9d",
+            "containerId": "a548127c-e34c-41b7-8bc7-e8617d312da9",
+            "name": "GetById",
+            "url": "http://localhost:3333/cidades/10",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-04-21T19:27:22.019Z",
+            "modified": "2025-04-21T20:39:32.870Z",
+            "headers": []
+        },
+        {
+            "_id": "6021b0a2-1123-4c8e-a63d-24e6de1a24cb",
+            "colId": "1e76ea17-ca87-4a1b-8292-c55beaf5fc9d",
+            "containerId": "a548127c-e34c-41b7-8bc7-e8617d312da9",
+            "name": "UpdateById",
+            "url": "http://localhost:3333/cidades/10",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2025-04-21T20:46:26.772Z",
+            "modified": "2025-04-21T20:47:36.385Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Carnaíba\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "2e772149-3453-477e-abf5-7d41c56176f8",
+            "colId": "1e76ea17-ca87-4a1b-8292-c55beaf5fc9d",
+            "containerId": "a548127c-e34c-41b7-8bc7-e8617d312da9",
+            "name": "DeleteById",
+            "url": "http://localhost:3333/cidades/1",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2025-04-21T20:57:43.761Z",
+            "modified": "2025-04-21T20:58:12.599Z",
+            "headers": []
         }
     ],
-    "ref": "FYXmNcliKBGRjuk0ToxdQ0JJaQWJAtGfoOE5prmknNgwRxVyiF23vZArFXhveEyAJOFrkwQ94dXna5pD7xpCjg"
+    "ref": "FYXmNcliKBGRjuk0ToxdQ0kRfcwBfVd-_r0IGthRfKZtecq3DCnQEvvLe0cMxAl0tnnkwbAJ5FpJYcBFQz2-LQ"
 }
