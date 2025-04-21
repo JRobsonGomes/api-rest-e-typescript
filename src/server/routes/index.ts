@@ -9,7 +9,7 @@ router.get('/', (_, res) => {
 
 router.get(
   '/cidades',
-  CidadesController.createValidation,
+  CidadesController.getAllValidation,
   CidadesController.getAll
 );
 
