@@ -2,7 +2,7 @@
     "clientName": "Thunder Client",
     "collectionName": "API-REST-TYPESCRIPT",
     "collectionId": "1e76ea17-ca87-4a1b-8292-c55beaf5fc9d",
-    "dateExported": "2025-04-20T02:19:24.919Z",
+    "dateExported": "2025-04-21T19:10:48.073Z",
     "version": "1.2",
     "folders": [
         {
@@ -23,14 +23,55 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2025-04-20T01:14:44.002Z",
-            "modified": "2025-04-20T02:17:50.572Z",
+            "modified": "2025-04-21T18:09:33.780Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nome\": \"Serra Branca\"\n}",
+                "raw": "{\n  \"nome\": \"Serra Branca\",\n  \"estado\": \"PE\"\n}",
                 "form": []
             }
+        },
+        {
+            "_id": "8b16702e-b0a1-4e35-b872-6f5d69602fd4",
+            "colId": "1e76ea17-ca87-4a1b-8292-c55beaf5fc9d",
+            "containerId": "",
+            "name": "CheckAPI",
+            "url": "http://localhost:3333",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-04-20T13:51:34.000Z",
+            "modified": "2025-04-20T13:51:34.000Z",
+            "headers": []
+        },
+        {
+            "_id": "08029fe3-8f21-4e88-9e5a-4140ba160a47",
+            "colId": "1e76ea17-ca87-4a1b-8292-c55beaf5fc9d",
+            "containerId": "a548127c-e34c-41b7-8bc7-e8617d312da9",
+            "name": "GetAll",
+            "url": "http://localhost:3333/cidades?page=1&limit=2&filter=asas",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-04-21T19:02:43.309Z",
+            "modified": "2025-04-21T19:07:16.801Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "page",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "limit",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "filter",
+                    "value": "asas",
+                    "isPath": false
+                }
+            ]
         }
     ],
-    "ref": "FYXmNcliKBGRjuk0ToxdQyfODvRqcx95cFWpjmgl_T7DGsP7WEud9vU4cAky0Q9wVr3FnxDrfZGYBo3ps5T3sw"
+    "ref": "FYXmNcliKBGRjuk0ToxdQ0JJaQWJAtGfoOE5prmknNgwRxVyiF23vZArFXhveEyAJOFrkwQ94dXna5pD7xpCjg"
 }
