@@ -4,28 +4,24 @@ import * as yup from 'yup';
 import { validation } from '../../shared/middleware/Validation';
 
 interface ICidade {
+  id?: number;
   nome: string;
-  estado: string;
-}
-interface IFilter {
-  filter?: string;
 }
 
 export const createValidation = validation((getSchema) => ({
-  body: getSchema<ICidade>(yup.object().shape({
-    nome: yup.string().required().min(3).max(50),
-    estado: yup.string().required().min(2),
-  })),
-  query: getSchema<IFilter>(yup.object().shape({
-    filter: yup.string().optional().min(2),
-  })),
+  body: getSchema<ICidade>(
+    yup.object().shape({
+      id: yup.number().optional(),
+      nome: yup.string().required().min(3).max(50),
+    })
+  ),
 }));
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export const create = async (req: Request<{}, {}, ICidade>, res: Response) => {
-  const { body } = req;
-  return res.status(StatusCodes.CREATED).json({
-    message: 'Cidades created successfully',
-    data: body,
-  });
+  console.log(req.body);
+
+  return res
+    .status(StatusCodes.INTERNAL_SERVER_ERROR)
+    .send('Não implementado!');
 };
