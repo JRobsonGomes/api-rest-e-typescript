@@ -1,38 +1,25 @@
-import { Request, RequestHandler, Response } from 'express';
+import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import * as yup from 'yup';
+import { validation } from '../../shared/middleware/Validation';
 
 interface ICidade {
   nome: string;
   estado: string;
 }
+interface IFilter {
+  filter?: string;
+}
 
-const bodyValidation: yup.SchemaOf<ICidade> = yup.object().shape({
-  nome: yup.string().required('Nome is required').min(3).max(50),
-  estado: yup.string().required('Estado is required').min(2).max(20),
-});
-
-export const createBodyValidation: RequestHandler = async (req, res, next) => {
-  try {
-    await bodyValidation.validate(req.body, {
-      abortEarly: false,
-    });
-
-    return next();
-  } catch (err) {
-    const yupError = err as yup.ValidationError;
-    const errors: Record<string, string> = {};
-
-    yupError.inner.forEach((error) => {
-      if (!error.path) return;
-      errors[error.path] = error.message;
-    });
-
-    return res.status(StatusCodes.BAD_REQUEST).json({
-      errors,
-    });
-  }
-};
+export const createValidation = validation((getSchema) => ({
+  body: getSchema<ICidade>(yup.object().shape({
+    nome: yup.string().required().min(3).max(50),
+    estado: yup.string().required().min(2),
+  })),
+  query: getSchema<IFilter>(yup.object().shape({
+    filter: yup.string().min(2),
+  })),
+}));
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export const create = async (req: Request<{}, {}, ICidade>, res: Response) => {

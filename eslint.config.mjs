@@ -17,6 +17,14 @@ export default defineConfig([
           /** Whether to allow empty interfaces. */
           allowInterfaces: 'always'
         },
+      ],
+      '@typescript-eslint/no-explicit-any': [
+        'error',
+        {
+          /** Whether to allow `any` in function parameters. */
+          ignoreRestArgs: true,
+          fixToUnknown: true
+        }
       ]
     },
   },

@@ -7,6 +7,10 @@ router.get('/', (_, res) => {
   res.send('Hello, World!');
 });
 
-router.post('/cidades', CidadesController.createBodyValidation, CidadesController.create);
+router.post(
+  '/cidades',
+  CidadesController.createValidation,
+  CidadesController.create
+);
 
 export { router };
