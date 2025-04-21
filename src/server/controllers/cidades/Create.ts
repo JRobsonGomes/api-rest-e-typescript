@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import { Request, RequestHandler, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import * as yup from 'yup';
 
@@ -12,14 +12,13 @@ const bodyValidation: yup.SchemaOf<ICidade> = yup.object().shape({
   estado: yup.string().required('Estado is required').min(2).max(20),
 });
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-export const create = async (req: Request<{}, {}, ICidade>, res: Response) => {
-  let validatedData: ICidade | undefined = undefined;
-
+export const createBodyValidation: RequestHandler = async (req, res, next) => {
   try {
-    validatedData = await bodyValidation.validate(req.body, {
+    await bodyValidation.validate(req.body, {
       abortEarly: false,
     });
+
+    return next();
   } catch (err) {
     const yupError = err as yup.ValidationError;
     const errors: Record<string, string> = {};
@@ -33,9 +32,13 @@ export const create = async (req: Request<{}, {}, ICidade>, res: Response) => {
       errors,
     });
   }
+};
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+export const create = async (req: Request<{}, {}, ICidade>, res: Response) => {
+  const { body } = req;
   return res.status(StatusCodes.CREATED).json({
     message: 'Cidades created successfully',
-    data: validatedData,
+    data: body,
   });
 };
