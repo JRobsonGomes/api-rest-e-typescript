@@ -13,15 +13,16 @@ interface IQueryProps {
 export const getAllValidation = validation((getSchema) => ({
   query: getSchema<IQueryProps>(
     yup.object().shape({
-      page: yup.number().optional().moreThan(0),
-      limit: yup.number().optional().moreThan(0),
+      page: yup.number().integer().optional().moreThan(0),
+      limit: yup.number().integer().optional().moreThan(0),
       filter: yup.string().optional(),
     })
   ),
 }));
 
 export const getAll = async (req: Request<{}, {}, {}, IQueryProps>, res: Response) => {
-  console.log(req.query);
+  const { query } = req;
+  console.log(query);
 
   return res
     .status(StatusCodes.INTERNAL_SERVER_ERROR)

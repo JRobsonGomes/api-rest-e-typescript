@@ -19,7 +19,8 @@ export const createValidation = validation((getSchema) => ({
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export const create = async (req: Request<{}, {}, ICidade>, res: Response) => {
-  console.log(req.body);
+  const { body } = req;
+  console.log(body);
 
   return res
     .status(StatusCodes.INTERNAL_SERVER_ERROR)
